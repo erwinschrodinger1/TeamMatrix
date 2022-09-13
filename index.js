@@ -4,6 +4,7 @@ const socket = require("socket.io");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+app.use(express.json());
 app.use(cors());
 
 const PORT = 5000;
@@ -37,6 +38,7 @@ app.get("/api/list", (req, res) => {
 
 app.post("/api/temp", (req, res) => {
   console.log(req.body);
+
   res.send("ok");
 });
 
