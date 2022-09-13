@@ -35,18 +35,11 @@ app.get("/api/list", (req, res) => {
   ]);
 });
 
-let server = app.listen(PORT, () => {
-  console.log(`Server started at port ${PORT}`);
+app.post("/api/temp", (req, res) => {
+  console.log(req.body);
+  res.send("ok");
 });
 
-const io = socket(server);
-
-io.on("connection", (socket) => {
-  console.log("New client connected");
-  socket.on("message", () => {
-    console.log("Location received");
-  });
-  socket.on("disconnect", () => {
-    console.log("Client disconnected");
-  });
+app.listen(PORT, () => {
+  console.log(`Server started at port ${PORT}`);
 });
