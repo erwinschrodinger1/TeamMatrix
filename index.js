@@ -13,7 +13,6 @@ const account2 = "0xE2CF271926AA45e41a97eAd02717A00fE19e7099";
 const account3 = "0xa20F86f8418e4A7b8f99c52A2ccaD19aE3cA3602";
 
 
-
 app.use(express.json());
 app.use(cors());
 
@@ -48,7 +47,6 @@ app.get("/api/list", (req, res) => {
 
 app.post("/api/temp", (req, res) => {
   console.log(req.body);
-
   res.send("ok");
 });
 
